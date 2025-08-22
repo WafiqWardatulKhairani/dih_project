@@ -11,10 +11,6 @@
             <a href="#solusi" class="font-medium hover:text-blue-600">Solusi</a>
             <a href="#hub" class="font-medium text-blue-600">Innovation Hub</a>
             <a href="#tentang" class="font-medium hover:text-blue-600">Tentang</a>
-            <div class="flex space-x-3">
-                <a href="#" class="px-4 py-2 text-sm rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-50">Masuk</a>
-                <a href="#" class="px-4 py-2 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700">Daftar</a>
-            </div>
         </div>
 
         <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
@@ -29,9 +25,6 @@
         <a href="#solusi" class="block py-2 font-medium">Solusi</a>
         <a href="#hub" class="block py-2 font-medium text-blue-600">Innovation Hub</a>
         <a href="#tentang" class="block py-2 font-medium">Tentang</a>
-        <div class="pt-2 mt-2 border-t">
-            <a href="#" class="block py-2 text-center mb-2 rounded-lg border border-blue-600 text-blue-600">Masuk</a>
-            <a href="#" class="block py-2 text-center rounded-lg bg-blue-600 text-white">Daftar</a>
-        </div>
+
     </div>
 </nav>
