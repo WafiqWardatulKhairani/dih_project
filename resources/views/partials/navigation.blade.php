@@ -11,9 +11,7 @@
             <a href="#solusi" class="font-medium hover:text-blue-600 transition-colors">Solusi</a>
             <a href="#hub" class="font-medium text-blue-600">Innovation Hub</a>
             <a href="#tentang" class="font-medium hover:text-blue-600 transition-colors">Tentang</a>
-            
         </div>
-        
         <button id="mobile-menu-toggle" class="md:hidden text-gray-700">
             <i class="fas fa-bars text-xl"></i>
         </button>
@@ -26,6 +24,5 @@
         <a href="#solusi" class="block py-2 font-medium">Solusi</a>
         <a href="#hub" class="block py-2 font-medium text-blue-600">Innovation Hub</a>
         <a href="#tentang" class="block py-2 font-medium">Tentang</a>
-
     </div>
 </nav>
