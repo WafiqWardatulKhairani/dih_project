@@ -5,6 +5,19 @@ use App\Http\Controllers\PemerintahController;
 use Livewire\Volt\Volt;
 
 
+Route::get('/dashboard', function () {
+    return 'Dashboard Placeholder';
+})->name('dashboard');
+
+Route::get('/settings/profile', function () {
+    return 'Profile Placeholder';
+})->name('settings.profile');
+
+
+
+
+
+
 Route::get('/', function () {
     return view('landing.landing_page');
 })->name('landing');
