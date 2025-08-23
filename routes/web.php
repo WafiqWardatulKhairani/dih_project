@@ -2,37 +2,27 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PemerintahController;
-use Livewire\Volt\Volt;
 
-
-// Dummy routes for tests
-Route::view('/login', 'welcome')->name('login');
-Route::view('/register', 'welcome')->name('register');
-Route::view('/forgot-password', 'welcome')->name('password.request');
-Route::view('/reset-password/{token}', 'welcome')->name('password.reset');
-Route::view('/confirm-password', 'welcome')->name('password.confirm');
-Route::view('/verify-email', 'welcome')->name('verification.notice');
-
-Route::view('/dashboard', 'welcome')->name('dashboard');
-
-Route::view('/settings/profile', 'welcome')->name('settings.profile');
-Route::view('/settings/password', 'welcome')->name('settings.password');
-Route::get('/settings/appearance', function () {
-    return 'Appearance Settings Page';
-})->name('settings.appearance');
-
-
-
-
-
-
-
-
+// ✅ Landing Page
 Route::get('/', function () {
     return view('landing.landing_page');
 })->name('landing');
 
-// Route untuk halaman pemerintah
+// ✅ Dashboard (harus pakai middleware auth biar test lulus)
+Route::get('/dashboard', function () {
+    return view('dashboard'); // pastikan file resources/views/dashboard.blade.php ada
+})->middleware(['auth'])->name('dashboard');
+
+// ✅ Settings
+Route::middleware(['auth'])->group(function () {
+    Route::view('/settings/profile', 'settings.profile')->name('settings.profile');
+    Route::view('/settings/password', 'settings.password')->name('settings.password');
+    Route::get('/settings/appearance', function () {
+        return 'Appearance Settings Page';
+    })->name('settings.appearance');
+});
+
+// ✅ Pemerintah routes
 Route::prefix('pemerintah')->group(function () {
     Route::get('/', [PemerintahController::class, 'index'])->name('pemerintah.index');
     Route::get('/program-list', [PemerintahController::class, 'programList'])->name('pemerintah.program.list');
@@ -40,5 +30,13 @@ Route::prefix('pemerintah')->group(function () {
     Route::post('/solusi', [PemerintahController::class, 'storeSolution'])->name('pemerintah.solution.store');
 });
 
-
+// ✅ Auth routes (login, register, forgot-password, reset-password, dll)
 require __DIR__.'/auth.php';
+
+Route::view('/login', 'auth.login')->name('login');
+Route::view('/register', 'auth.register')->name('register');
+Route::view('/forgot-password', 'auth.forgot-password')->name('password.request');
+Route::view('/reset-password/{token}', 'auth.reset-password')->name('password.reset');
+Route::view('/confirm-password', 'auth.confirm-password')->name('password.confirm');
+Route::view('/verify-email', 'auth.verify-email')->name('verification.notice');
+
