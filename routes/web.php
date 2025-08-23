@@ -17,6 +17,10 @@ Route::view('/dashboard', 'welcome')->name('dashboard');
 
 Route::view('/settings/profile', 'welcome')->name('settings.profile');
 Route::view('/settings/password', 'welcome')->name('settings.password');
+Route::get('/settings/appearance', function () {
+    return 'Appearance Settings Page';
+})->name('settings.appearance');
+
 
 
 
