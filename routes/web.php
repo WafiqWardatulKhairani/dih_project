@@ -5,13 +5,19 @@ use App\Http\Controllers\PemerintahController;
 use Livewire\Volt\Volt;
 
 
-Route::get('/dashboard', function () {
-    return 'Dashboard Placeholder';
-})->name('dashboard');
+// Dummy routes for tests
+Route::view('/login', 'welcome')->name('login');
+Route::view('/register', 'welcome')->name('register');
+Route::view('/forgot-password', 'welcome')->name('password.request');
+Route::view('/reset-password/{token}', 'welcome')->name('password.reset');
+Route::view('/confirm-password', 'welcome')->name('password.confirm');
+Route::view('/verify-email', 'welcome')->name('verification.notice');
 
-Route::get('/settings/profile', function () {
-    return 'Profile Placeholder';
-})->name('settings.profile');
+Route::view('/dashboard', 'welcome')->name('dashboard');
+
+Route::view('/settings/profile', 'welcome')->name('settings.profile');
+Route::view('/settings/password', 'welcome')->name('settings.password');
+
 
 
 
