@@ -11,6 +11,11 @@ class PemerintahController extends Controller
         return view('pemerintah.index');
     }
     
+    public function programList()
+    {
+        return view('pemerintah.program-list');
+    }
+    
     public function storeProgram(Request $request)
     {
         // Validasi dan logika penyimpanan program

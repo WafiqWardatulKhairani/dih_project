@@ -10,11 +10,11 @@
             </div>
             
             <nav class="hidden lg:flex space-x-10 items-center">
-                <a href="#home" class="text-gray-700 hover:text-purple-600 transition nav-active">Beranda</a>
-                <a href="#programs" class="text-gray-700 hover:text-purple-600 transition">Program</a>
-                <a href="#rooms" class="text-gray-700 hover:text-purple-600 transition">Diskusi</a>
-                <a href="#solutions" class="text-gray-700 hover:text-purple-600 transition">Solusi</a>
-                <a href="#about" class="text-gray-700 hover:text-purple-600 transition">Tentang</a>
+                <a href="{{ route('pemerintah.index') }}" class="text-gray-700 hover:text-purple-600 transition {{ request()->routeIs('pemerintah.index') ? 'nav-active' : '' }}">Beranda</a>
+                <a href="{{ route('pemerintah.program.list') }}" class="text-gray-700 hover:text-purple-600 transition {{ request()->routeIs('pemerintah.program.list') ? 'nav-active' : '' }}">Program</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 transition">Diskusi</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 transition">Solusi</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600 transition">Tentang</a>
             </nav>
             
             <div class="flex items-center space-x-4">

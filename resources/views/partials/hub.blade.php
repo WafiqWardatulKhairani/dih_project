@@ -17,10 +17,10 @@
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-blue-800">Untuk OPD</h3>
                 <p class="text-gray-600 mb-6">Publikasikan tantangan dan program prioritas Anda, dapatkan solusi berbasis penelitian dari para ahli.</p>
-                <a href="#" class="text-blue-600 font-medium flex items-center group">
-                    Pelajari Lebih Lanjut
-                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
+                <a href="{{ route('pemerintah.index') }}" class="text-blue-600 font-medium flex items-center group">
+    Pelajari Lebih Lanjut
+    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+</a>
             </div>
             
             <!-- Akademisi Card -->

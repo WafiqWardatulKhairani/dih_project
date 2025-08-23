@@ -16,10 +16,10 @@ Route::get('/', function () {
 // Route untuk halaman pemerintah
 Route::prefix('pemerintah')->group(function () {
     Route::get('/', [PemerintahController::class, 'index'])->name('pemerintah.index');
+    Route::get('/program-list', [PemerintahController::class, 'programList'])->name('pemerintah.program.list');
     Route::post('/program', [PemerintahController::class, 'storeProgram'])->name('pemerintah.program.store');
     Route::post('/solusi', [PemerintahController::class, 'storeSolution'])->name('pemerintah.solution.store');
 });
-
 
 
 require __DIR__.'/auth.php';
